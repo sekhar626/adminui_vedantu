@@ -86,15 +86,15 @@ class PersonType extends Component {
 
           <div className="action-container">
             {isEdited ? (
-              <button type="button" onClick={saveItem}>
+              <button type="button" onClick={saveItem} className="save-button">
                 <FiSave className="icon" />
               </button>
             ) : (
-              <button type="button" onClick={editItem}>
+              <button type="button" onClick={editItem} className="edit-button">
                 <FiEdit className="icon" />
               </button>
             )}
-            <button type="button" onClick={deleteItem}>
+            <button type="button" onClick={deleteItem} className="delete-button">
               <AiOutlineDelete className="icon" />
             </button>
           </div>
