@@ -1,0 +1,40 @@
+.person-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 36px;
+  }
+  
+  .detail-of-person {
+    padding: 2%;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 768px) {
+    .detail-of-person {
+      width: 15%;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .email {
+      font-size: x-small;
+      flex-wrap: wrap;
+      margin-right: 5px;
+      
+    }
+    .role {
+      font-size: x-small;
+
+    }
+  }
+  
+  
+  .active-check-box {
+    background-color: gray;
+  }
+  .check-box {
+    background-color: #fff;
+  }
+  
