@@ -45,6 +45,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #66a3ff;
   }
   
   .pagination-container {
