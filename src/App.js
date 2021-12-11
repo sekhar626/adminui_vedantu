@@ -53,7 +53,9 @@ class App extends Component {
     const {allCheck} = this.state
 
     if (allCheck) {
-      this.setState(prevState => ({allCheck: !prevState.allCheck}))
+      this.setState({allCheck: false})
+    }else{
+      this.setState(prevState=>({allCheck:!prevState.allCheck}))
     }
 
     this.setState({activePage: id})
