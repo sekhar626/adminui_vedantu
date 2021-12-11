@@ -99,7 +99,7 @@ class PersonType extends Component {
             </button>
           </div>
         </div>
-        <hr />
+        <hr/>
       </>
     )
   }

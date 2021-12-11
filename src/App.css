@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .app-contianer {
     display: flex;
     flex-direction: column;
@@ -11,7 +14,11 @@
     justify-content: center;
     align-items: center;
   }
-  
+  .list-item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .details-container {
     display: flex;
     flex-direction: column;
@@ -72,4 +79,8 @@
   .delete-selected-button {
     background-color: red;
   }
-  
+  .items-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }

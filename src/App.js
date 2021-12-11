@@ -46,6 +46,7 @@ class App extends Component {
     this.setState({
       searchElement: event.target.value,
     })
+    this.setState({activePage:1})
   }
 
   onChangePage = id => {
@@ -151,9 +152,13 @@ class App extends Component {
   }
 
   deleteSelectedItems = () => {
+    const {allCheck}=this.state
     const searchedList = this.getSearchItems()
     const deleteToBeList = searchedList.filter(eachMail => !eachMail.isChecked)
     this.setState({mailData: deleteToBeList})
+    if(allCheck){
+      this.setState({allCheck:false})
+    }
   }
 
   getSearchItems = () => {
@@ -171,7 +176,7 @@ class App extends Component {
     this.setState(prevState => ({
       mailData: prevState.mailData.map(eachDataItem => {
         if (id === eachDataItem.id) {
-          return {...eachDataItem, isEdited: !eachDataItem.isChecked}
+          return {...eachDataItem, isEdited: !eachDataItem.isEdited}
         }
         return eachDataItem
       }),
@@ -229,12 +234,13 @@ class App extends Component {
             className="input-field"
           />
           </div>
+          
           <div className="heading-container">
             <input
               type="checkbox"
               onChange={this.changeSelectAllCheckBox}
               checked={allCheck}
-              name="multipleSelect"
+              
             />
             <p className="heading">Name</p>
             <p className="heading">Email</p>
@@ -242,6 +248,7 @@ class App extends Component {
             <p className="heading">Actions</p>
           </div>
           <hr />
+          
           {dataToShow.map(eachPerson => (
             <PersonType
               key={eachPerson.id}
@@ -254,6 +261,7 @@ class App extends Component {
               saveDetails={this.saveDetails}
             />
           ))}
+          
           <div className="pagination-container">
             <button
               type="button"
