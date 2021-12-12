@@ -146,7 +146,7 @@ class App extends Component {
         if (id === eachDataItem.id) {
           return {...eachDataItem, isChecked: !eachDataItem.isChecked}
         }
-        return eachDataItem
+        return eachDataItem 
       }),
     }))
   }
